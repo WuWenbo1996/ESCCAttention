@@ -54,22 +54,6 @@ def compute_melspectrogram(audio, file_name):
     """convert a power spectrogram to decibel units (log-mel spectrogram)"""
     melspectrogram = librosa.power_to_db(melspectrogram)
 
-    import matplotlib.pyplot as plt
-    plt.figure()
-    fig, ax = plt.subplots()
-    plt.imshow(melspectrogram)
-    file_name = IMG_PATH + file_path.split('/')[-1] + ".jpg"
-    plt.axis("off")
-    plt.xticks([])
-    plt.yticks([])
-    fig.set_size_inches(melspectrogram.shape[1] / 100.0, melspectrogram.shape[0] / 100.0)
-    plt.gca().xaxis.set_major_locator(plt.NullLocator())
-    plt.gca().yaxis.set_major_locator(plt.NullLocator())
-    plt.subplots_adjust(top=1,bottom=0,left=0,right=1,hspace=0,wspace=0)
-    plt.margins(0,0)
-    plt.savefig(file_name)
-    plt.close()
-
     """Visualize spec"""
     # import matplotlib.pyplot as plt
     # plt.subplot(3, 1, 1)

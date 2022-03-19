@@ -31,7 +31,6 @@ elif MODEL_NAME =='cbam':
 import utils
 import validate
 
-
 # Hyper Params
 parser = argparse.ArgumentParser(description='PyTorch ESC(ESC-10|ESC-50)/USC Training')
 parser.add_argument('--dataset_name', default=DATA_NAME, type=str, help='Name of Dataset(ESC10/ESC50/USC)')

@@ -92,8 +92,7 @@ class AudioDataset(Dataset):
         return len(self.audio_df)
 
     def __getitem__(self, index):
-        img_file_name, label, fold = self.audio_df.iloc[index]
-        spectrogram = np.array(plt.imread(img_file_name))
+        spectrogram, label, fold = self.audio_df.iloc[index]
         # print(spectrogram)
 
         if self.transforms is not None:
